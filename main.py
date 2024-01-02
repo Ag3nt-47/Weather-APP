@@ -12,9 +12,15 @@ derece_label = None
 durum_label = None
 
 image_req = requests.get("https://www.webtekno.com/images/editor/default/0003/28/2c0e3b703a9d620ee9cec146ada63b7e081e5501.jpeg")
+ico_req = requests.get("https://raw.githubusercontent.com/Ag3nt-47/Weather-APP/main/weather.ico")
+
 if image_req.status_code == 200:
     with open("image.jpeg", 'wb') as file:
         file.write(image_req.content)
+        
+if ico_req.status_code == 200:
+    with open("weather.ico", 'wb') as file:
+        file.write(ico_req.content)
 
 
 class WeatherMap():
@@ -74,4 +80,3 @@ def make_req():
 if __name__ == '__main__':
     a = WeatherMap(0)
     a.w1.mainloop()
-
