@@ -17,7 +17,7 @@ ico_req = requests.get("https://raw.githubusercontent.com/Ag3nt-47/Weather-APP/m
 if image_req.status_code == 200:
     with open("image.jpeg", 'wb') as file:
         file.write(image_req.content)
-        
+
 if ico_req.status_code == 200:
     with open("weather.ico", 'wb') as file:
         file.write(ico_req.content)
@@ -54,7 +54,7 @@ class WeatherMap():
         self.derece_label = Label(self.w1, text ="", anchor='w', font = tkinter.font.Font(family ="Bodoni MT", size = 14), cursor ="arrow", state ="normal")
         self.derece_label.place(x = 10, y = 330, width = 440, height = 22)
         self.durum_label = Label(self.w1, text ="", anchor='w', font = tkinter.font.Font(family ="Impact", size = 11), cursor ="arrow", state ="normal")
-        self.durum_label.place(x = 350, y = 350, width = 400, height = 42)
+        self.durum_label.place(x = 320, y = 350, width = 400, height = 42)
 
 def make_req():
 
